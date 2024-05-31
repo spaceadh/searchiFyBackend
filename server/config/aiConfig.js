@@ -1,12 +1,14 @@
 import "dotenv/config";
 import { HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
 
+const GeminiKey = process.env.GEMINI_API_KEY || 'AIzaSyBgWiIo1jG67broYNEw7Umi5H4XYiYJpx8';
+
 export const aiConfig = {
   // These Gemini models are updated upto September 2021
   gemini: {
     textOnlyModel: "gemini-pro",
     textAndImageModel: "gemini-pro-vision",
-    apiKey: process.env.GEMINI_API_KEY,
+    apiKey: GeminiKey,
 
     // Gemini Safety Settings
     // Explore all Harm categories here -> https://ai.google.dev/api/rest/v1beta/HarmCategory
